@@ -6,7 +6,7 @@
         <property value="com.mysql.jdbc.Driver" name="driverClass"/>
         <property value="jdbc:mysql://localhost:3306/spring?characterEncoding=UTF-8" name="url"/>
         <property value="root" name="username"/>
-        <property value="rlarod1633" name="password"/>
+        <property value="root" name="password"/>
     </bean>
 
     <bean id="userService" class="user.service.UserService">
