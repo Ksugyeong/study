@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+    <bean class="org.springframework.jdbc.datasource.SimpleDriverDataSource" id="dataSource">
+    <property value="com.mysql.jdbc.Driver" name="driverClass"/>
+    <property value="jdbc:mysql://localhost/springbook?characterEncoding=UTF-8" name="url"/>
+    <property value="spring" name="username"/>
+    <property value="book" name="password"/>
+
+</bean>
+    <bean class="user.dao.UserDao" id="userDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+</beans>
